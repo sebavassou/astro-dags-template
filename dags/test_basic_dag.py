@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from airflow.decorators import dag, task
 from airflow.operators.bash import BashOperator
 
-@dag(
+#@dag(
     dag_id="test_basic_dag",
     start_date=datetime(2025, 1, 1),
     schedule=timedelta(minutes=5),   # Airflow 3 accepts `schedule` (alias of schedule_interval)
@@ -26,4 +26,4 @@ def test_basic_dag():
 
     hello >> bash
 
-dag = test_basic_dag()
+#dag = test_basic_dag()
